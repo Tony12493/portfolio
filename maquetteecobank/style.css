@@ -1,0 +1,512 @@
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+    --project-bg: #f5f1e8;
+    --project-surface: #ffffff;
+    --project-text: #171717;
+    --project-muted: #68645d;
+    --project-gold: #c9a227;
+    --project-border: rgba(23, 23, 23, 0.12);
+}
+
+
+/* =========================================================
+   BASE
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--project-bg);
+    color: var(--project-text);
+
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+
+    transition:
+        background-color 0.5s ease,
+        color 0.5s ease;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.project-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    height: 76px;
+    padding: 0 6%;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+
+    background: rgba(245, 241, 232, 0.94);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid var(--project-border);
+}
+
+.back-link {
+    justify-self: start;
+
+    color: var(--project-text);
+    text-decoration: none;
+
+    font-size: 0.85rem;
+    font-weight: 500;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.back-link:hover {
+    color: var(--project-gold);
+    transform: translateX(-4px);
+}
+
+.project-logo {
+    justify-self: center;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    letter-spacing: 0.22em;
+}
+
+.project-controls {
+    justify-self: end;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.control-button {
+    width: 38px;
+    height: 38px;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--project-border);
+    border-radius: 50%;
+
+    background: transparent;
+    color: var(--project-text);
+
+    font-family: inherit;
+    font-size: 0.78rem;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.control-button:hover {
+    border-color: var(--project-gold);
+    color: var(--project-gold);
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   CONTENU
+========================================================= */
+
+main {
+    width: min(1120px, 88%);
+    margin: 0 auto;
+}
+
+section {
+    padding: 90px 0;
+}
+
+
+/* =========================================================
+   INTRODUCTION
+========================================================= */
+
+.project-intro {
+    min-height: 70vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    border-bottom: 1px solid var(--project-border);
+}
+
+.project-number {
+    margin-bottom: 18px;
+
+    color: var(--project-gold);
+
+    font-size: 0.78rem;
+    font-weight: 600;
+
+    letter-spacing: 0.18em;
+}
+
+.project-intro h1 {
+    margin-bottom: 22px;
+
+    font-size: clamp(3rem, 7vw, 6rem);
+
+    line-height: 1;
+
+    letter-spacing: -0.05em;
+}
+
+.project-intro > p {
+    max-width: 700px;
+
+    color: var(--project-muted);
+
+    font-size: 1.08rem;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   TECHNOLOGIES
+========================================================= */
+
+.project-technologies {
+    margin-top: 30px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.project-technologies span {
+    padding: 8px 15px;
+
+    background: var(--project-surface);
+
+    border: 1px solid var(--project-border);
+
+    border-radius: 30px;
+
+    font-size: 0.78rem;
+}
+
+
+/* =========================================================
+   NUMÉROS
+========================================================= */
+
+.section-number {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: var(--project-gold);
+
+    font-size: 0.8rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.15em;
+}
+
+
+/* =========================================================
+   PRÉSENTATION
+========================================================= */
+
+.project-description {
+    border-bottom: 1px solid var(--project-border);
+}
+
+.project-description h2,
+.project-features h2,
+.project-gallery h2 {
+    margin-bottom: 30px;
+
+    font-size: clamp(2rem, 4vw, 3.2rem);
+
+    line-height: 1.15;
+}
+
+.project-description p {
+    max-width: 780px;
+
+    color: var(--project-muted);
+
+    font-size: 1.05rem;
+
+    line-height: 2;
+}
+
+
+/* =========================================================
+   ÉLÉMENTS
+========================================================= */
+
+.project-features {
+    border-bottom: 1px solid var(--project-border);
+}
+
+.features-grid {
+    margin-top: 45px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top: 1px solid var(--project-border);
+
+    border-left: 1px solid var(--project-border);
+}
+
+.feature-card {
+    min-height: 220px;
+
+    padding: 32px;
+
+    border-right: 1px solid var(--project-border);
+    border-bottom: 1px solid var(--project-border);
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.feature-card:hover {
+    background: var(--project-surface);
+}
+
+.feature-card h3 {
+    margin-bottom: 15px;
+
+    font-size: 1.05rem;
+}
+
+.feature-card p {
+    color: var(--project-muted);
+
+    font-size: 0.9rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   GALERIE
+========================================================= */
+
+.project-gallery {
+    padding-bottom: 120px;
+}
+
+.gallery-grid {
+    margin-top: 45px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 24px;
+}
+
+.gallery-grid img {
+    width: 100%;
+
+    background: var(--project-surface);
+
+    border: 1px solid var(--project-border);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.gallery-grid img:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.project-footer {
+    padding: 35px 20px;
+
+    background: #111111;
+
+    color: #cfcfcf;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.project-footer p {
+    margin: 4px 0;
+
+    font-size: 0.85rem;
+}
+
+
+/* =========================================================
+   MODE SOMBRE
+========================================================= */
+
+body.dark-mode {
+    --project-bg: #0f0f0f;
+    --project-surface: #171717;
+    --project-text: #f5f1e8;
+    --project-muted: #aaa59c;
+    --project-border: rgba(255, 255, 255, 0.12);
+}
+
+body.dark-mode .project-header {
+    background: rgba(15, 15, 15, 0.94);
+}
+
+body.dark-mode .control-button {
+    border-color: rgba(255, 255, 255, 0.16);
+}
+
+body.dark-mode .feature-card:hover {
+    background: #171717;
+}
+
+body.dark-mode .gallery-grid img {
+    background: #171717;
+}
+
+body.dark-mode .gallery-grid img:hover {
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================================
+   TABLETTE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    main {
+        width: 90%;
+    }
+
+    section {
+        padding: 75px 0;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .project-header {
+        height: 68px;
+        padding: 0 5%;
+    }
+
+    .back-link {
+        font-size: 0;
+    }
+
+    .back-link::before {
+        content: "←";
+        font-size: 1.15rem;
+    }
+
+    .project-logo {
+        font-size: 0.72rem;
+        letter-spacing: 0.16em;
+    }
+
+    .project-controls {
+        gap: 6px;
+    }
+
+    .control-button {
+        width: 34px;
+        height: 34px;
+    }
+
+    main {
+        width: 88%;
+    }
+
+    section {
+        padding: 65px 0;
+    }
+
+    .project-intro {
+        min-height: calc(100vh - 68px);
+    }
+
+    .project-intro h1 {
+        font-size: clamp(2.5rem, 13vw, 4.5rem);
+    }
+
+    .project-intro > p {
+        font-size: 0.95rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card {
+        min-height: auto;
+        padding: 26px;
+    }
+
+    .project-description h2,
+    .project-features h2,
+    .project-gallery h2 {
+        font-size: 2rem;
+    }
+
+}

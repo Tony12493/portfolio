@@ -1,69 +1,1088 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mon Portfolio</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header>
-<h1>Bienvenue sur mon Portfolio</h1>
-<nav>
-<ul>
-<li><a href="#about">À propos</a></li>
-<li><a href="#projects">Projets</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
-</header>
-<main>
-    <section id="about">
-<h2>À propos de moi</h2>
-<p>Je suis un développeur passionné par la création
-d’applications web modernes.</p>
-<p>Mes compétences incluent :</p>
-<ul>
-<li>HTML5 & CSS3</li>
-<li>JavaScript</li>
-<li>Git & GitHub</li>
-<li>Responsive Design</li>
-</ul>
-</section>
-<section id="projects">
-<h2>Mes Projets</h2>
-<div class="projects-grid">
-<article class="project-card">
-<h3>Site E-commerce</h3>
-<p>Une plateforme de vente en ligne moderne avec panier
-et paiement sécurisé.</p>
-<p><strong>Technologies :</strong> React, Node.js, MongoDB</p>
-</article>
-<article class="project-card">
-<h3>Application Mobile de Fitness</h3>
-<p>Application de suivi d’entraînement avec statistiques
-et programmes personnalisés.</p>
-<p><strong>Technologies :</strong> React Native, Firebase</p>
-</article>
-<article class="project-card">
-<h3>Dashboard Analytics</h3>
-<p>Tableau de bord interactif pour visualisation
-de données d’entreprise.</p>
-<p><strong>Technologies :</strong> D3.js, Python, PostgreSQL</p>
-</article>
-</div>
-</section>
-<section id="contact">
-<h2>Contact</h2>
-<p>N’hésitez pas à me contacter pour vos projets.</p>
-</section>
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfolio — Fokam Mogo Onil Tony</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+</head>
+
+
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header class="navbar">
+
+<a href="#accueil" class="logo">
+    <span>P</span>ORTFOLIO
+</a>
+<button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu">
+    ☰
+</button>
+
+        <nav>
+    <ul>
+        <li>
+            <a href="#accueil" data-i18n="navAccueil">Accueil</a>
+        </li>
+
+        <li>
+            <a href="#travaux" data-i18n="navTravaux">Mes travaux</a>
+        </li>
+
+        <li>
+            <a href="#parcours" data-i18n="navParcours">Parcours</a>
+        </li>
+
+        <li>
+            <a href="#contact" data-i18n="navContact">Contact</a>
+        </li>
+    </ul>
+</nav>
+
+        <div class="nav-actions">
+
+            <!-- Mode clair / sombre -->
+            <button id="theme-toggle" aria-label="Changer de thème">
+    <span class="theme-icon">☀️</span>
+</button>
+            
+
+            <!-- Langue -->
+            <button id="language-toggle" aria-label="Changer de langue">
+                FR
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             01 — ACCUEIL
+        ========================== -->
+
+        <section id="accueil">
+
+    <div class="hero-content">
+
+        <p data-i18n="heroIntro">Bienvenue dans mon univers</p>
+        <h1>
+            FOKAM MOGO<br>
+            <span>ONIL TONY</span>
+        </h1>
+
+        <h2 data-i18n="heroJob">
+    Développeur Web
+</h2>
+        <p data-i18n="heroSubtitle">Génie Logiciel & Administration Réseau</p>
+         <div class="dragon-container">
+
+    <canvas id="dragon-canvas"></canvas>
+
+</div>
+
+       
+
+        
+
+    </div>
+
+
+    <!-- Animation du dragon : nous l'intégrerons ici -->
     
 
 
-</main>
-<footer>
-<p>&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
-</footer>
+    <div class="about-story">
+
+        <div class="story-title">
+            <span>01</span>
+            <h2 data-i18n="storyTitle">Mon histoire</h2>
+        </div>
+
+        <div class="story-content">
+
+            <p data-i18n="story1">
+    Je m'appelle <strong>Fokam Mogo Onil Tony</strong>,
+    titulaire d'une <strong>Licence en Génie Logiciel
+    et Administration Réseau</strong>.
+</p>
+
+<p data-i18n="story2">
+    L'informatique fait partie de ces domaines qui
+    m'ont intrigué pendant plusieurs années. Je savais
+    qu'il s'agissait d'une science qui me plaisait,
+    mais je n'avais pas encore trouvé ce qui allait
+    réellement me pousser à m'y investir.
+</p>
+
+<p data-i18n="story3">
+    Puis est arrivé un projet. Un projet que je n'ai
+    malheureusement pas réussi à terminer du premier coup.
+</p>
+
+<p class="story-highlight" data-i18n="storyHighlight">
+    Pourtant, quelque chose avait changé :
+    je voulais comprendre, recommencer et réussir.
+</p>
+
+<p data-i18n="story4">
+    J'ai continué à apprendre, à expérimenter et à
+    avancer, jusqu'au jour où j'ai finalement réussi
+    à réaliser quelque chose qui, pour d'autres,
+    pouvait sembler simple, mais qui pour moi
+    représentait beaucoup.
+</p>
+
+<p data-i18n="story5">
+    Cette petite réussite est devenue un déclic.
+    Depuis, je trace progressivement mon chemin
+    dans cette vaste science.
+</p>
+
+<p data-i18n="story6">
+    Le parcours n'est pas toujours facile, mais cette
+    satisfaction que je ressens lorsque je parviens
+    à créer, résoudre ou comprendre quelque chose
+    continue de me pousser à avancer.
+</p>
+
+<p data-i18n="story7">
+    Aujourd'hui, mon objectif est de continuer à
+    apprendre, d'acquérir de nouvelles connaissances
+    au fil des années et, <strong>par la grâce de Dieu</strong>,
+    de construire une carrière dans l'un des nombreux
+    domaines de l'informatique.
+</p>
+        </div>
+
+    </div>
+    <div class="hero-cta">
+
+        <a href="#travaux" data-i18n="discover">Découvrir mes travaux <span>→</span></a>
+    </div>
+
+
+</section>
+
+        <!-- =========================
+             02 — MES TRAVAUX
+        ========================== -->
+
+        <section id="travaux" class="page-section travaux">
+
+           <div class="section-inner">
+
+        <!-- TITRE DE SECTION -->
+        <div class="section-heading">
+
+            <span class="section-number">02</span>
+
+            <h2 data-i18n="worksTitle">Mes travaux</h2>
+
+        </div>
+
+
+        <!-- INTRODUCTION -->
+        <div class="works-intro">
+
+            <p class="works-description" data-i18n="worksDescription">
+    Découvrez les différents projets et travaux
+    réalisés au cours de mon parcours.
+</p>
+
+            <h3 data-i18n="development">Développement</h3>
+            <p class="works-subdescription" data-i18n="developmentDescription">
+    Applications web, applications mobiles,
+    sites web et solutions logicielles.
+</p>
+        </div>
+
+            <!-- =========================
+                 DÉVELOPPEMENT
+            ========================== -->
+
+            
+
+
+                <!-- TRAVAUX LOCAUX -->
+
+                <div class="work-subcategory">
+
+                    <h4 data-i18n="localProjects">
+    Travaux locaux
+</h4>
+                    <div class="projects-grid">
+
+                        <!-- CHEZNOUS -->
+
+                        <article class="project-card">
+
+    <div class="project-image">
+        <!-- Image du projet -->
+    </div>
+
+    <div class="project-content">
+
+        <span class="project-status" data-i18n="localProject">
+            Projet local
+        </span>
+
+        <h3 data-i18n="cheznousTitle">
+            CHEZNOUS
+        </h3>
+
+        <p data-i18n="cheznousDescription">
+    Plateforme de mise en relation entre clients, commerçants et livreurs pour la vente de produits alimentaires étrangers au Sénégal.
+</p>
+
+        <div class="project-technologies">
+            PHP · MySQL · JavaScript
+        </div>
+
+        <a href="projet.html?projet=cheznous" class="project-link" data-i18n="seeProject">
+    Voir le projet →
+</a>
+
+    </div>
+
+</article>
+                        <!-- MyStudyPlanner -->
+
+                        <article class="project-card">
+
+                            <div class="project-image">
+                                <!-- Image du projet -->
+                            </div>
+
+                            <div class="project-content">
+
+                                <span class="project-status" data-i18n="localProject">
+    Projet local
+</span>
+
+                                <h3 data-i18n="mystudyplannerTitle">
+                                    MyStudyPlanner
+                                </h3>
+
+                                <p data-i18n="mystudyplannerDescription">
+                                    Plateforme d'organisation académique
+                                    destinée à aider les étudiants à mieux
+                                    gérer leur travail et leur temps.
+                                </p>
+
+                                <div class="project-technologies">
+                                    React · JavaScript · Node.js
+                                </div>
+
+                                <a href="mystudyplanner/index.html" class="project-link" data-i18n="seeProject">
+    Voir le projet →
+</a>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- Gestion des certificats -->
+
+                        <article class="project-card">
+
+                            <div class="project-image">
+                                <!-- Image du projet -->
+                            </div>
+
+                            <div class="project-content">
+
+                                <span class="project-status" data-i18n="localProject">
+    Projet local
+</span>
+                                <h3 data-i18n="certificatsTitle">
+                                    Gestion des certificats
+                                </h3>
+
+                                <p data-i18n="certificatsDescription">
+                                    Application web Laravel permettant
+                                    la gestion des certificats d'une
+                                    communauté.
+                                </p>
+
+                                <div class="project-technologies">
+                                    PHP · Laravel · MySQL
+                                </div>
+
+                               <a href="gestioncertificats/index.html" class="project-link" data-i18n="seeProject">
+    Voir le projet →
+</a>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- Sites web -->
+
+                        <article class="project-card">
+
+                            <div class="project-image">
+                                <!-- Image du projet -->
+                            </div>
+
+                            <div class="project-content">
+
+                                <span class="project-status" data-i18n="localProject">
+    Projet local
+</span>
+
+                                <h3 data-i18n="websitesTitle">
+                                    Sites web vitrines
+                                </h3>
+
+                                <p data-i18n="sitesVitrinesDescription">
+                                    Création de sites web vitrines
+                                    pour des entreprises et des projets
+                                    personnels.
+                                </p>
+
+                                <div class="project-technologies">
+                                    HTML · CSS · JavaScript
+                                </div>
+
+                                
+                            </div>
+
+                        </article>
+                        <!-- MAQUETTE ECOBANK -->
+<article class="project-card">
+
+   <span class="project-type" data-i18n="localProject">
+    Projet local
+</span>
+
+    <h3 data-i18n="ecobankTitle">
+        Maquette Ecobank
+    </h3>
+
+    <p data-i18n="ecobankDescription">
+        Conception d'une maquette d'application mobile
+        inspirée d'une solution bancaire, réalisée avec Flutter.
+    </p>
+
+    <p class="technologies">
+        Flutter · Dart · UI/UX
+    </p>
+
+    <a href="maquetteecobank/index.html" data-i18n="seeProject">
+    Voir le projet →
+</a>
+
+</article>
+
+
+<!-- APPLICATION TIKTOK -->
+<article class="project-card">
+
+    <span class="project-type" data-i18n="localProject">
+    Projet local
+</span>
+    <h3 data-i18n="tiktokTitle">
+        Application TikTok
+    </h3>
+
+    <p data-i18n="tiktokDescription">
+        Réalisation d'une application mobile inspirée
+        de TikTok avec Flutter.
+    </p>
+
+    <p class="technologies">
+        Flutter · Dart
+    </p>
+
+    <a href="applicationtiktok/index.html" data-i18n="seeProject">
+    Voir le projet →
+</a>
+
+</article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TRAVAUX HÉBERGÉS -->
+
+                <div class="work-subcategory">
+
+                   <h4 data-i18n="hostedProjects">
+    Travaux hébergés
+</h4>
+
+                    <div class="projects-grid">
+
+                        <!-- Les projets hébergés seront ajoutés ici -->
+
+                        <article class="project-card hosted">
+
+                            <div class="project-image">
+                                <!-- Capture du projet -->
+                            </div>
+
+                            <div class="project-content">
+
+                                <span class="project-status" data-i18n="online">
+    En ligne
+</span>
+
+                                <h4 data-i18n="hostedProjects">
+    Travaux hébergés
+</h4>
+                                <p data-i18n="hostedProjectsDescription">
+                                    Retrouvez ici les projets que j'ai réalisés et qui sont actuellement accessibles en ligne.
+Découvrez les projets et consultez directement leurs liens.
+                                </p>
+
+                                
+
+                               <a href="projetheberges/index.html" class="project-link" data-i18n="seeProject">
+    Voir le projet →
+</a>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 CLOUD / SÉCURITÉ
+            ========================== -->
+
+             <div class="infrastructure-header">
+
+        <h2 data-i18n="cloudTitle">
+    Cloud · Sécurité · Réseaux · Systèmes
+</h2>
+        <p data-i18n="cloudDescription">
+    Travaux pratiques et projets liés aux infrastructures,
+    au cloud, à la virtualisation, aux réseaux et à la sécurité.
+</p>
+    </div>
+
+
+                <div class="projects-grid">
+
+
+                    <!-- Cloud & Virtualisation -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+                            <!-- Image / schéma du projet -->
+                        </div>
+
+                        <div class="project-content">
+
+                            <h3 data-i18n="cloudVirtualizationTitle">
+    Cloud & Virtualisation
+</h3>
+                             <p data-i18n="cloudVirtualizationDescription">
+        Déploiement d'une application conteneurisée
+        dans une architecture Cloud locale basée
+        sur des machines virtuelles Linux.
+    </p>
+
+                            <div class="project-technologies">
+                                Docker · Linux · VirtualBox · SSH · VNC · noVNC
+                            </div>
+
+                            
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Architecture logicielle -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+                            <!-- Image / schéma du projet -->
+                        </div>
+
+                        <div class="project-content">
+
+                            <h3 data-i18n="softwareCloudTitle">
+    Architecture logicielle & Cloud
+</h3>
+                           <p data-i18n="softwareCloudDescription">
+    Déploiement d'une application composée
+    d'une base MongoDB Atlas, d'une API Express
+    et d'un frontend Next.js.
+</p>
+
+                            <div class="project-technologies">
+                                MongoDB Atlas · Express · Next.js · Render · Vercel
+                            </div>
+
+                            
+                        </div>
+
+                    </article>
+
+
+                    <!-- Labs Git & GitHub -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+                            <!-- Image du lab -->
+                        </div>
+
+                        <div class="project-content">
+
+                           <h3 data-i18n="gitLabsTitle">
+    Labs Git & GitHub
+</h3>
+
+                            <p data-i18n="gitLabsDescription">
+    Travaux pratiques réalisés pour comprendre
+    la gestion de versions, les branches,
+    les commits et la collaboration avec GitHub.
+</p>
+
+                            <div class="project-technologies">
+                                Git · GitHub
+                            </div>
+
+                            
+                        </div>
+
+                    </article>
+                    <!-- Supervision & Administration SMARTTECH -->
+
+<article class="project-card">
+
+    <div class="project-image">
+        <!-- Image / capture du projet -->
+    </div>
+
+    <div class="project-content">
+
+        <h3 data-i18n="smarttechTitle">
+    Supervision & Administration d'infrastructure
+</h3>
+        <p data-i18n="smarttechDescription1">
+    Projet SMARTTECH consacré au déploiement et à
+    l'administration d'une infrastructure informatique
+    sous Linux.
+</p>
+
+        <p data-i18n="smarttechDescription2">
+            Configuration de services SSH, FTP, MariaDB et SNMP,
+            déploiement de Zabbix avec Docker Compose et supervision
+            des hôtes Linux et Windows.
+        </p>
+
+        <div class="project-technologies">
+            Ubuntu · Docker · Docker Compose · Zabbix · Nagios ·
+            SNMP · Syslog-ng · MariaDB
+        </div>
+
+    </div>
+
+</article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             03 — PARCOURS
+        ========================== -->
+
+        <section id="parcours" class="page-section parcours">
+
+            
+
+
+            <!-- Formation -->
+
+            <div class="section-header">
+
+        <p class="section-number">
+            03
+        </p>
+
+       <h2 data-i18n="educationTitle">Parcours</h2>
+    </div>
+
+
+    <div class="education-timeline">
+
+
+        <!-- 2025 - 2026 -->
+
+        <div class="timeline-item">
+
+            <span class="timeline-year">
+                2025 — 2026
+            </span>
+
+            <div class="timeline-content">
+
+                <h3>
+                    Licence en Génie Logiciel et Administration Réseau
+                </h3>
+
+                <p>
+                    L3 GLAR · ESTM Dakar
+                </p>
+
+                <span data-i18n="degreeObtained">Diplôme obtenu</span>
+            </div>
+
+        </div>
+
+
+        <!-- 2024 - 2025 -->
+
+        <div class="timeline-item">
+
+            <span class="timeline-year">
+                2024 — 2025
+            </span>
+
+            <div class="timeline-content">
+
+                <h3>
+                    Licence en Génie Logiciel et Administration Réseau
+                </h3>
+
+                <p>
+                    L2 GLAR · ESTM Dakar
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 2023 - 2024 -->
+
+        <div class="timeline-item">
+
+            <span class="timeline-year">
+                2023 — 2024
+            </span>
+
+            <div class="timeline-content">
+
+                <h3>
+                    Licence en Génie Logiciel et Administration Réseau
+                </h3>
+
+                <p>
+                    L1 GLAR · ESTM Dakar
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 2022 - 2023 -->
+
+        <div class="timeline-item">
+
+            <span class="timeline-year">
+                2022 — 2023
+            </span>
+
+            <div class="timeline-content">
+
+                <h3>
+                    Baccalauréat scientifique
+                </h3>
+
+                <p>
+                    Collège Saint Charles Borromée · Cameroun
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+            <!-- Compétences -->
+
+            <div class="skills">
+
+               <h3 data-i18n="skillsTitle">
+    Technologies & compétences
+</h3>
+                <div class="skills-grid">
+
+                    <div class="skill-category">
+                        <h4>Frontend</h4>
+                        <p>
+                            HTML · CSS · JavaScript · React · Next.js
+                        </p>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Backend</h4>
+                        <p>
+                            PHP · Laravel · Node.js · Express.js
+                        </p>
+                    </div>
+
+                   <div class="skill-category">
+    <h4 data-i18n="databases">Bases de données</h4>
+    <p>
+        MySQL · MongoDB · SQLite
+    </p>
+</div>
+
+                    <div class="skill-category">
+    <h4 data-i18n="cloudDevops">Cloud & DevOps</h4>
+    <p>
+        Docker · Docker Compose · Git · GitHub
+    </p>
+</div>
+                   <div class="skill-category">
+    <h4 data-i18n="cloudDevops">Cloud & DevOps</h4>
+    <p>
+        Docker · Docker Compose · Git · GitHub
+    </p>
+</div>
+
+                    <div class="skill-category">
+    <h4 data-i18n="modeling">Modélisation</h4>
+    <p>
+        UML · MCD · MLD · Architecture logicielle
+    </p>
+</div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             04 — CONTACT
+        ========================== -->
+
+        <section id="contact" class="page-section contact">
+
+    <div class="section-header">
+
+        <p class="section-number">
+            04
+        </p>
+
+        <h2 data-i18n="contactTitle">
+    Contact
+</h2>
+        <div class="contact-intro">
+
+        <p data-i18n="contactIntro">
+    Une opportunité, un projet ou simplement envie d'échanger ?
+    N'hésitez pas à me contacter.
+</p>
+
+    </div>
+
+    </div>
+
+
+    <div class="contact-container">
+
+
+        <!-- INFORMATIONS DE CONTACT -->
+
+        <div class="contact-info">
+
+            <h3 data-i18n="letsTalk">
+    Parlons-en.
+</h3>
+             
+            <div class="contact-details">
+
+                <div class="contact-item">
+
+                    <span data-i18n="email">Email</span>
+
+                    <a href="mailto:oniltony1977@gmail.com">
+                        oniltony1977@gmail.com
+                    </a>
+
+                </div>
+                <div class="contact-item">
+
+    <span data-i18n="phone">Numéro de téléphone</span>
+
+    <a href="tel:+221787304516" class="phone-link">
+
+        <span class="phone-icon">☎</span>
+
+        +221 78 730 45 16
+
+    </a>
+
+</div>
+
+                <div class="contact-item">
+
+                    <span>
+                        LinkedIn
+                    </span>
+
+                    <a href="#" target="_blank">
+                        onil Fokam
+                    </a>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <span>
+                        GitHub
+                    </span>
+
+                    <a href="#" target="_blank">
+                        Tony12493
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FORMULAIRE -->
+
+       <form id="contact-form" class="contact-form">
+
+            <div class="form-group">
+
+                <label for="name" data-i18n="name">Nom</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Votre nom"
+                    required 
+                    data-i18n-placeholder="yourName"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+    <label for="email" data-i18n="email">
+        Email
+    </label>
+
+    <input 
+    type="email" 
+    id="email" 
+    name="email" 
+    placeholder="votre@email.com"
+    data-i18n-placeholder="emailPlaceholder"
+    required 
+>
+</div>
+
+
+            <div class="form-group">
+
+                <label for="message" data-i18n="message">
+    Message
+</label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="6"
+                    placeholder="Votre message..."
+                    required
+                    data-i18n-placeholder="yourMessage"
+                ></textarea>
+
+            </div>
+
+
+           <button type="submit" data-i18n="send">
+    Envoyer
+</button>
+        </form>
+
+    </div>
+
+</section>
+
+        <!-- =========================
+             05 — LE TEMPS
+        ========================== -->
+
+        <!-- =========================
+     05 — LE TEMPS
+========================== -->
+
+<section id="temps" class="page-section temps">
+
+    <div class="section-header">
+
+        <p class="section-number">
+            05
+        </p>
+
+        <h2 data-i18n="timeTitle">
+            Le temps
+        </h2>
+
+        <p class="time-quote" data-i18n="timeQuote">
+    « Chaque instant consacré à apprendre construit
+    l'expérience de demain. »
+</p>
+    </div>
+
+
+    <!-- HORLOGE -->
+
+    <div class="clock-wrapper">
+
+        <div class="clock" id="clock">
+
+            <!-- Chiffres -->
+
+            <span class="clock-number number-12">12</span>
+            <span class="clock-number number-1">1</span>
+            <span class="clock-number number-2">2</span>
+            <span class="clock-number number-3">3</span>
+            <span class="clock-number number-4">4</span>
+            <span class="clock-number number-5">5</span>
+            <span class="clock-number number-6">6</span>
+            <span class="clock-number number-7">7</span>
+            <span class="clock-number number-8">8</span>
+            <span class="clock-number number-9">9</span>
+            <span class="clock-number number-10">10</span>
+            <span class="clock-number number-11">11</span>
+
+
+            <!-- Aiguilles -->
+
+            <div class="clock-hand hour-hand" id="hour-hand"></div>
+
+            <div class="clock-hand minute-hand" id="minute-hand"></div>
+
+            <div class="clock-hand second-hand" id="second-hand"></div>
+
+
+            <!-- Centre -->
+
+            <div class="clock-center">
+
+                <div class="clock-web web-one"></div>
+                <div class="clock-web web-two"></div>
+                <div class="clock-web web-three"></div>
+
+                <div class="clock-spider">
+
+                    <span class="spider-body"></span>
+
+                    <span class="spider-leg leg-1"></span>
+                    <span class="spider-leg leg-2"></span>
+                    <span class="spider-leg leg-3"></span>
+                    <span class="spider-leg leg-4"></span>
+
+                    <span class="spider-leg leg-5"></span>
+                    <span class="spider-leg leg-6"></span>
+                    <span class="spider-leg leg-7"></span>
+                    <span class="spider-leg leg-8"></span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- TEXTE FINAL -->
+
+    <div class="time-ending">
+
+        <p data-i18n="timeEnding">
+    Le temps passe.
+</p>
+
+        <span data-i18n="timeEndingSub">
+    Ce que nous en faisons construit la suite.
+</span>
+
+    </div>
+
+</section>
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 Fokam Mogo Onil Tony
+        </p>
+
+        <p>
+            Portfolio
+        </p>
+
+    </footer>
+
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script src="script.js"></script>
+
+    
+
 </body>
+
+
 </html>
