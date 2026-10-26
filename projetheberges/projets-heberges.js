@@ -96,7 +96,11 @@ const translations = {
             "Site web animé réalisé autour du thème de la Saint-Valentin, avec une expérience interactive et visuelle.",
 
         leaderDescription:
-            "Site vitrine réalisé pour présenter les services et l'activité d'une entreprise de manière professionnelle."
+            "Site vitrine réalisé pour présenter les services et l'activité d'une entreprise de manière professionnelle.",
+        
+        
+        leuDescription:
+            "Site web associatif conçu pour présenter les missions, les activités et les initiatives solidaires de l'association en faveur des personnes en situation difficile."
 
     },
 
@@ -134,7 +138,11 @@ const translations = {
             "An animated website created around Valentine's Day, with an interactive and visual experience.",
 
         leaderDescription:
-            "A showcase website created to professionally present a company's services and activities."
+            "A showcase website created to professionally present a company's services and activities.",
+        
+        leuDescription:
+            "An association website designed to present the organization's missions, activities, and charitable initiatives supporting people facing difficult circumstances."
+
 
     }
 
